@@ -18,16 +18,21 @@
         height: 100%;
       }
 
-      #info {
-
+      #alerts {
         font-size: 11px;
-        position: absolute;
-        bottom: 5px;
         background-color: rgba(0,0,0,0.8);
         border-radius: 3px;
         right: 10px;
         padding: 10px;
+        position: absolute;
+        top: 20px;
+      }
 
+      .alert {
+        background-color: #9C3E3E;
+        padding: 11px;
+        border-radius: 5px;
+        opacity: 0.9;
       }
 
       #currentInfo {
@@ -105,23 +110,22 @@
 
   <div id="container"></div>
 
-  <div id="info">
-    <strong><a href="http://www.chromeexperiments.com/globe">WebGL Globe</a></strong> <span class="bull">&bull;</span> Created by the Google Data Arts Team <span class="bull">&bull;</span> Data acquired from <a href="http://sedac.ciesin.columbia.edu/gpw/">SEDAC</a>
+  <div id="currentInfo">
+    <span id="year1990" class="year">Realtime</span>
+    <span id="year1995" class="year">Past Hour</span>
+    <span id="year2000" class="year">Past Day</span>
   </div>
 
-  <div id="currentInfo">
-    <span id="year1990" class="year">1990</span>
-    <span id="year1995" class="year">1995</span>
-    <span id="year2000" class="year">2000</span>
+  <div id="alerts">
+    <h2>Alerts</h2>
+    <div class="alert">
+      Response time of 1023ms measured from <a href="">Tokyo</a> to endpoint <a href="">Load Balancer 1</a>
+    </div>
   </div>
 
   <div id="title">
-    World Population
+    Application Response Times
   </div>
-
-  <a id="ce" href="http://www.chromeexperiments.com/globe">
-    <span>This is a Chrome Experiment</span>
-  </a>
 
   <script type="text/javascript" src="/globe/third-party/Detector.js"></script>
   <script type="text/javascript" src="/globe/third-party/three.min.js"></script>
